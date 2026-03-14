@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Care PA | Professional Home Care Collegeville</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai"
+    }
+  }
+  </script>
+
+  <script>
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            evergreen: {
+              dark: '#0F2922',
+              primary: '#1B4332',
+              sage: '#B7C9B0',
+              mint: '#D8E2DC',
+              gold: '#D4AF37',
+              cream: '#F9FBF9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { background-color: #F9FBF9; scroll-behavior: smooth; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+    .evergreen-gradient {
+      background: linear-gradient(to right, rgba(15, 41, 34, 0.95), rgba(15, 41, 34, 0.6));
+    }
+    .page-section { display: none; }
+    .page-section.active { display: block; animation: fadeIn 0.5s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.95); }
+    .nav-link.active { color: #D4AF37 !important; font-weight: 700; }
+  </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="selection:bg-evergreen-gold selection:text-white">
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="#home" class="flex items-center space-x-3 group">
+        <div class="w-12 h-12 bg-evergreen-primary rounded-2xl flex items-center justify-center text-white font-display font-bold text-xl shadow-lg transform transition-transform group-hover:rotate-6">E</div>
+        <div class="flex flex-col">
+          <span id="logo-text" class="font-display font-bold text-xl leading-none transition-colors text-white">Evergreen Care</span>
+          <span id="logo-subtext" class="text-[10px] font-bold uppercase tracking-widest transition-colors text-evergreen-mint/70">Collegeville, PA</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex space-x-10 items-center">
+        <a href="#home" class="nav-link text-white font-medium hover:text-evergreen-gold transition-all">Home</a>
+        <a href="#services" class="nav-link text-white font-medium hover:text-evergreen-gold transition-all">Services</a>
+        <a href="#about" class="nav-link text-white font-medium hover:text-evergreen-gold transition-all">About</a>
+        <a href="#careers" class="nav-link text-white font-medium hover:text-evergreen-gold transition-all">Careers</a>
+        <a href="#contact" class="bg-evergreen-gold text-white px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 hover:bg-evergreen-primary transition-all active:scale-95">
+          Free Assessment
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Home Section -->
+    <section id="home" class="page-section active">
+      <div class="relative min-h-[95vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Senior Care">
+          <div class="absolute inset-0 evergreen-gradient"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-white pt-20">
+          <div class="max-w-4xl">
+            <span class="text-evergreen-gold font-bold uppercase tracking-widest text-sm mb-6 block">Montgomery County Trusted Partner</span>
+            <h1 class="text-6xl md:text-8xl font-display font-bold mb-8 leading-tight tracking-tight">
+              Helping you stay in the <span class="text-evergreen-gold italic underline decoration-white/20 underline-offset-8">home</span> you love.
+            </h1>
+            <p class="text-xl md:text-2xl mb-12 text-evergreen-mint max-w-2xl font-light leading-relaxed">
+              Compassionate home care in Collegeville, Royersford, and Phoenixville. Helping your loved ones maintain independence since 2018.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+              <a href="#contact" class="bg-evergreen-gold text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl hover:bg-white hover:text-evergreen-dark transition-all text-center">
+                Schedule Assessment
+              </a>
+              <a href="#services" class="border-2 border-white/40 backdrop-blur-sm text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white/10 transition-all text-center">
+                Our Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Trust Bar -->
+      <section class="py-24 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-70 grayscale hover:grayscale-0 transition-all duration-700">
+            <div class="text-center">
+              <span class="text-4xl font-black text-evergreen-dark block">BBB A+</span>
+              <p class="text-[10px] uppercase font-bold tracking-widest mt-2 text-gray-400">Accredited</p>
+            </div>
+            <div class="text-center">
+              <span class="text-4xl font-black text-evergreen-dark block">24/7</span>
+              <p class="text-[10px] uppercase font-bold tracking-widest mt-2 text-gray-400">Support Available</p>
+            </div>
+            <div class="text-center">
+              <span class="text-4xl font-black text-evergreen-gold block">★★★★★</span>
+              <p class="text-[10px] uppercase font-bold tracking-widest mt-2 text-gray-400">Top Rated</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Three Pillars -->
+      <section class="py-32 bg-evergreen-cream relative overflow-hidden">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&w=1000&q=80" class="rounded-[40px] shadow-2xl relative z-10 w-full aspect-[4/3] object-cover" alt="Caregivers">
+            <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-evergreen-primary/5 rounded-full z-0"></div>
+          </div>
+          <div>
+            <h2 class="text-5xl font-display font-bold text-evergreen-primary mb-8 leading-tight">Expert care, delivered with a neighbor's touch.</h2>
+            <p class="text-xl text-gray-600 leading-relaxed mb-10 font-light">
+              We serve Collegeville and surrounding towns with a focus on trust and continuity. Our caregivers aren't just staff—they are partners in your health journey.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div class="flex flex-col space-y-2 group">
+                <div class="flex items-center space-x-3 text-evergreen-dark font-bold group-hover:text-evergreen-gold">
+                  <span class="w-8 h-8 bg-evergreen-gold/10 text-evergreen-gold rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                  <span class="text-lg">Dementia Experts</span>
+                </div>
+                <p class="text-sm text-gray-500 pl-11">Specialized training in memory care.</p>
+              </div>
+              <div class="flex flex-col space-y-2 group">
+                <div class="flex items-center space-x-3 text-evergreen-dark font-bold group-hover:text-evergreen-gold">
+                  <span class="w-8 h-8 bg-evergreen-gold/10 text-evergreen-gold rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                  <span class="text-lg">24/7 Availability</span>
+                </div>
+                <p class="text-sm text-gray-500 pl-11">Peace of mind, at any hour.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="page-section pt-48 pb-32 px-6 bg-evergreen-cream">
+      <div class="container mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-24">
+          <h1 class="text-5xl md:text-7xl font-display font-bold text-evergreen-primary mb-8 tracking-tight">Care Tailored to You.</h1>
+          <p class="text-2xl text-gray-600 font-light leading-relaxed">Every individual is different. Every care plan is custom-built to help you age in place with dignity.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="bg-white p-12 rounded-[50px] shadow-lg border border-transparent hover:border-evergreen-sage/20 transition-all">
+            <div class="text-5xl mb-8">🏠</div>
+            <h3 class="text-3xl font-display font-bold text-evergreen-dark mb-6">Personal Care</h3>
+            <p class="text-gray-600 leading-relaxed mb-10 text-lg font-light">Dignified assistance with hygiene, dressing, and mobility. We respect your routine.</p>
+            <a href="#contact" class="text-evergreen-gold font-bold flex items-center hover:translate-x-2 transition-transform">Get Started →</a>
+          </div>
+          <div class="bg-white p-12 rounded-[50px] shadow-lg border border-transparent hover:border-evergreen-sage/20 transition-all">
+            <div class="text-5xl mb-8">🧠</div>
+            <h3 class="text-3xl font-display font-bold text-evergreen-dark mb-6">Memory Care</h3>
+            <p class="text-gray-600 leading-relaxed mb-10 text-lg font-light">Certified Alzheimer's and Dementia support focusing on safety and joy.</p>
+            <a href="#contact" class="text-evergreen-gold font-bold flex items-center hover:translate-x-2 transition-transform">Get Started →</a>
+          </div>
+          <div class="bg-white p-12 rounded-[50px] shadow-lg border border-transparent hover:border-evergreen-sage/20 transition-all">
+            <div class="text-5xl mb-8">🌿</div>
+            <h3 class="text-3xl font-display font-bold text-evergreen-dark mb-6">Respite Care</h3>
+            <p class="text-gray-600 leading-relaxed mb-10 text-lg font-light">Relief for family caregivers. We step in so you can recharge your own batteries.</p>
+            <a href="#contact" class="text-evergreen-gold font-bold flex items-center hover:translate-x-2 transition-transform">Get Started →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section pt-48 pb-32 px-6 bg-white min-h-screen">
+      <div class="max-w-4xl mx-auto">
+        <span class="text-evergreen-gold font-bold uppercase tracking-widest text-sm mb-4 block">Our Roots</span>
+        <h1 class="text-5xl md:text-7xl font-display font-bold text-evergreen-primary mb-12 tracking-tight">Serving Montgomery County since 2018.</h1>
+        <div class="prose prose-xl text-gray-600 leading-relaxed space-y-8 font-light">
+          <p class="text-2xl text-evergreen-dark font-normal">Evergreen Care PA was founded with one mission: to treat your family like our own.</p>
+          <p>We are locally owned and operated. This means we are your neighbors. When you call, you talk to someone who knows Collegeville, Phoenixville, and Skippack personally.</p>
+        </div>
+
+        <!-- Smart Drafter Tool -->
+        <div id="drafter-container" class="bg-white p-8 rounded-3xl border border-evergreen-sage shadow-xl mt-20 relative border-t-8 border-t-evergreen-gold">
+          <div class="absolute top-0 right-0 p-2 bg-evergreen-gold text-white text-[10px] font-bold uppercase tracking-widest rounded-bl-lg">AI Content Tool</div>
+          <h4 class="text-evergreen-primary font-display font-bold text-lg mb-2 flex items-center">✨ Need a custom care plan overview?</h4>
+          <p class="text-sm text-gray-600 mb-6">Tell us your specific situation and we'll draft a professional care approach for you.</p>
+          <textarea id="ai-input" class="w-full p-4 bg-evergreen-mint/20 border border-evergreen-sage/30 rounded-2xl text-sm mb-4 outline-none focus:ring-2 focus:ring-evergreen-gold" placeholder="E.g., Mom needs help with meds and breakfast in Collegeville..." rows="3"></textarea>
+          <button id="ai-generate-btn" class="w-full py-4 bg-evergreen-primary text-white rounded-2xl font-bold hover:bg-evergreen-dark transition-all shadow-lg disabled:bg-gray-300">Generate Professional Text</button>
+          <div id="ai-result" class="mt-8 p-8 bg-evergreen-cream rounded-2xl hidden italic text-gray-700 leading-relaxed border border-evergreen-sage/20"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="page-section pt-48 pb-32 px-6 bg-white min-h-screen">
+      <div class="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div>
+          <span class="text-evergreen-gold font-bold uppercase tracking-widest text-sm mb-4 block">Join Our Team</span>
+          <h1 class="text-6xl md:text-8xl font-display font-bold text-evergreen-primary mb-10 tracking-tight leading-none">Love what you do.</h1>
+          <p class="text-xl text-gray-600 mb-12 font-light leading-relaxed">Join the Evergreen family. We offer competitive pay, flexible local shifts, and a supportive team environment in Collegeville.</p>
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4"><div class="w-2 h-2 rounded-full bg-evergreen-gold"></div><p class="font-bold text-evergreen-dark">Competitive Local Pay</p></div>
+            <div class="flex items-center space-x-4"><div class="w-2 h-2 rounded-full bg-evergreen-gold"></div><p class="font-bold text-evergreen-dark">Supportive Clinical Oversight</p></div>
+            <div class="flex items-center space-x-4"><div class="w-2 h-2 rounded-full bg-evergreen-gold"></div><p class="font-bold text-evergreen-dark">Flexible Schedule</p></div>
+          </div>
+        </div>
+        <div class="bg-evergreen-cream p-12 rounded-[60px] shadow-2xl border border-evergreen-sage/20">
+          <h3 class="text-3xl font-display font-bold text-evergreen-primary mb-8">Apply Today</h3>
+          <form class="space-y-6">
+            <input type="text" placeholder="Full Name" class="w-full p-5 bg-white rounded-2xl border border-transparent focus:border-evergreen-gold outline-none">
+            <input type="email" placeholder="Email Address" class="w-full p-5 bg-white rounded-2xl border border-transparent focus:border-evergreen-gold outline-none">
+            <textarea placeholder="Tell us about your caregiving experience..." class="w-full p-5 bg-white rounded-2xl border border-transparent focus:border-evergreen-gold outline-none" rows="4"></textarea>
+            <button class="w-full py-5 bg-evergreen-primary text-white font-bold rounded-2xl shadow-xl hover:bg-evergreen-dark transition-all">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section pt-48 pb-32 px-6 bg-evergreen-dark min-h-screen">
+      <div class="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div class="text-white">
+          <h1 class="text-6xl md:text-8xl font-display font-bold mb-10 tracking-tight">Ready to talk?</h1>
+          <p class="text-2xl text-evergreen-mint/60 mb-16 font-light">Montgomery County's local care team is ready to help you navigate next steps.</p>
+          <div class="space-y-8">
+            <div>
+              <p class="text-evergreen-gold font-bold uppercase text-xs tracking-widest mb-2">Call Us</p>
+              <a href="tel:6105550123" class="text-4xl font-display font-bold hover:text-evergreen-gold">(610) 555-0123</a>
+            </div>
+            <div>
+              <p class="text-evergreen-gold font-bold uppercase text-xs tracking-widest mb-2">Service Area</p>
+              <p class="text-xl">Collegeville, Phoenixville, Royersford & Skippack</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-12 rounded-[60px] shadow-2xl">
+          <h3 class="text-3xl font-display font-bold text-evergreen-primary mb-8">Request Assessment</h3>
+          <form class="space-y-6">
+            <input type="text" placeholder="Your Name" class="w-full p-5 bg-evergreen-cream rounded-2xl focus:ring-2 focus:ring-evergreen-gold outline-none">
+            <input type="text" placeholder="Zip Code" class="w-full p-5 bg-evergreen-cream rounded-2xl focus:ring-2 focus:ring-evergreen-gold outline-none">
+            <textarea placeholder="Describe your care needs..." class="w-full p-5 bg-evergreen-cream rounded-2xl focus:ring-2 focus:ring-evergreen-gold outline-none" rows="4"></textarea>
+            <button class="w-full py-6 bg-evergreen-gold text-white font-bold rounded-3xl text-xl shadow-2xl hover:bg-evergreen-primary transition-all">Request Info</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-evergreen-dark text-white pt-32 pb-16">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 border-b border-white/10 pb-20">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center space-x-4 mb-8">
+            <div class="w-14 h-14 bg-evergreen-gold rounded-2xl flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg">E</div>
+            <span class="font-display font-bold text-3xl">Evergreen Care</span>
+          </div>
+          <p class="text-evergreen-mint/60 text-xl font-light leading-relaxed max-w-md">Professional home care in Montgomery County since 2018. Helping you stay in the home you love.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-8 uppercase tracking-widest text-evergreen-gold text-xs">Resources</h4>
+          <ul class="space-y-4 opacity-60">
+            <li><a href="#services" class="hover:text-evergreen-gold">Services</a></li>
+            <li><a href="#about" class="hover:text-evergreen-gold">Our Story</a></li>
+            <li><a href="#careers" class="hover:text-evergreen-gold">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-8 uppercase tracking-widest text-evergreen-gold text-xs">Contact</h4>
+          <p class="opacity-60 leading-relaxed">
+            Collegeville, PA 19426<br>
+            Phone: (610) 555-0123<br>
+            admin@evergreencarepa.com
+          </p>
+        </div>
+      </div>
+      <p class="text-center opacity-30 text-sm">© 2025 Evergreen Care PA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
